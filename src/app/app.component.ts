@@ -26,6 +26,17 @@ import { Settings } from '../providers/providers';
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyARXtM8JStW3UmgERWH_ufd_ixPqc5qytE",
+    authDomain: "www-olivercastelblanco-com.firebaseapp.com",
+    databaseURL: "https://www-olivercastelblanco-com.firebaseio.com",
+    projectId: "www-olivercastelblanco-com",
+    storageBucket: "www-olivercastelblanco-com.appspot.com",
+    messagingSenderId: "850614628513"
+  }
+};
 export class MyApp {
   rootPage = FirstRunPage;
 
@@ -57,7 +68,7 @@ export class MyApp {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
     const browserLang = this.translate.getBrowserLang();
 
     if (browserLang) {
@@ -73,7 +84,7 @@ export class MyApp {
         this.translate.use(this.translate.getBrowserLang());
       }
     } else {
-      this.translate.use('en'); // Set your language here
+      this.translate.use('es'); // Set your language here
     }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
