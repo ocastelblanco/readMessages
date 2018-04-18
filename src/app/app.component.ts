@@ -26,17 +26,6 @@ import { Settings } from '../providers/providers';
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
-export const environment = {
-  production: false,
-  firebase: {
-    apiKey: "AIzaSyARXtM8JStW3UmgERWH_ufd_ixPqc5qytE",
-    authDomain: "www-olivercastelblanco-com.firebaseapp.com",
-    databaseURL: "https://www-olivercastelblanco-com.firebaseio.com",
-    projectId: "www-olivercastelblanco-com",
-    storageBucket: "www-olivercastelblanco-com.appspot.com",
-    messagingSenderId: "850614628513"
-  }
-};
 export class MyApp {
   rootPage = FirstRunPage;
 
