@@ -1,2 +1,2 @@
 # readMessages
-Mobile app for reading messages from www.olivercastelblanco.com
+Mobile app for reading contact messages left in www.olivercastelblanco.com
