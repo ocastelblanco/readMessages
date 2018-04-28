@@ -1,18 +1,21 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>{{ item.name }}</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-title>{{item.name}}</ion-title>
+    </ion-navbar>
 </ion-header>
-
-
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
-
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
-  </div>
+    <div class="item-detail" padding>
+        <h2>{{item.name}}</h2>
+        <ion-item no-lines>
+            <ion-icon item-start name="calendar"></ion-icon>
+            <p>{{item.date | date:'short'}}</p>
+            <p item-end>{{item.diferencia}}</p>
+        </ion-item>
+        <h3>{{item.subject}}</h3>
+        <p>{{item.message}}</p>
+        <button ion-button icon-right block (click)="abreInbox(item)">
+            Responder en Inbox
+            <ion-icon name="open"></ion-icon>
+        </button>
+    </div>
 </ion-content>
